@@ -7,41 +7,48 @@ model = joblib.load("best_model.pkl")
 
 # Manual encoding maps
 workclass_map = {
-    "Private": 0, "Self-emp-not-inc": 1, "Self-emp-inc": 2,
-    "Federal-gov": 3, "Local-gov": 4, "State-gov": 5,
-    "Without-pay": 6, "Never-worked": 7
-}
+    "Federal-gov": 0, "Local-gov": 1, "Others": 2,
+    "Private": 3, "Self-emp-inc": 4, "Self-emp-not-inc": 5,
+    "State-gov": 6 }
+
 
 education_map = {
-    "Bachelors": 0,
-    "Some-college": 1,
-    "11th": 2,
-    "HS-grad": 3,
-    "Prof-school": 4,
-    "Assoc-acdm": 5,
-    "Assoc-voc": 6,
-    "9th": 7,
-    "7th-8th": 8,
-    "12th": 9,
-    "Masters": 10,
-    "1st-4th": 11,
-    "10th": 12,
-    "Doctorate": 13,
-    "5th-6th": 14,
-    "Preschool": 15
+    "10th": 0,
+    "11th": 1,
+    "12th": 2,
+    "9th": 3,
+    "Assoc-acdm": 4,
+    "Assoc-voc": 5,
+    "Bachelors": 6,
+    "Doctorate": 7,
+    "HS-grad": 8,
+    "masters": 9,
+    "Prof-school": 10,
+    "Some-college": 11,
 }
 
 marital_status_map = {
-    "Never-married": 0, "Married-civ-spouse": 1, "Divorced": 2,
-    "Separated": 3, "Married-spouse-absent": 4, "Widowed": 5
+    "Divorced": 0, "Married-AF-spouse": 1, "Married-civ-spouse": 2,
+    "Married-spouse-absent": 3, "Never-married": 4, "Separated": 5,"Widowed": 6
 }
 occupation_map = {
-    "Tech-support": 0, "Craft-repair": 1, "Other-service": 2, "Sales": 3,
-    "Exec-managerial": 4, "Prof-specialty": 5, "Handlers-cleaners": 6,
-    "Machine-op-inspct": 7, "Adm-clerical": 8, "Farming-fishing": 9,
-    "Transport-moving": 10, "Priv-house-serv": 11,
-    "Protective-serv": 12, "Armed-Forces": 13
+    "Adm-clerical": 0,
+    "Armed-Forces": 1,
+    "Craft-repair": 2,
+    "Exec-managerial": 3,
+    "Farming-fishing": 4,
+    "Handlers-cleaners": 5,
+    "Machine-op-inspct": 6,
+    "Other-service": 7,
+    "Others": 8,
+    "Priv-house-serv": 9,
+    "Prof-specialty": 10,
+    "Protective-serv": 11,
+    "Sales": 12,
+    "Tech-support": 13,
+    "Transport-moving": 14
 }
+
 gender_map = {"Male": 1, "Female": 0}
 
 # Streamlit UI
